@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simle app to showcae mobx features",
   "main": "index.js",
-  "homepage": "https://kerenfru.github.io/montara",
+  "homepage": "http://shrestharosy.github.io/mobx-demo-post-reactions",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode development",
@@ -26,7 +26,6 @@
   "bugs": {
     "url": "https://github.com/shrestharosy/mobx-demo-post-reactions/issues"
   },
-  "homepage": "http://shrestharosy.github.io/mobx-demo-post-reactions",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -39,6 +38,7 @@
     "cypress-react-selector": "^1.1.1",
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.2.2",

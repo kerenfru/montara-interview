@@ -1,0 +1,99 @@
+{
+  "name": "montara",
+  "version": "1.0.0",
+  "description": "A simle app to showcae mobx features",
+  "main": "index.js",
+  "homepage": "https://kerenfru.github.io/montara",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode development",
+    "test": "jest",
+    "server": "node server/server.js",
+    "cypress": "cypress open",
+    "e2e": "start-test server 3000 start 8084 cypress",
+    "lint": "eslint src/**/*.js",
+    "heroku-prebuild": "npm install --dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrestharosy/mobx-demo-post-reactions.git"
+  },
+  "keywords": [],
+  "author": "Rosy Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrestharosy/mobx-demo-post-reactions/issues"
+  },
+  "homepage": "http://shrestharosy.github.io/mobx-demo-post-reactions",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "cypress": "^4.12.1",
+    "cypress-react-selector": "^1.1.1",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.2.2",
+    "jest-transform-css": "^2.0.0",
+    "json-server": "^0.16.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "start-server-and-test": "^1.11.3",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "material-ui": "^0.20.2",
+    "mobx": "^5.15.5",
+    "mobx-react": "^6.2.5",
+    "moment": "^2.27.0",
+    "promise.prototype.finally": "^3.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.2.0",
+    "superagent": "^5.3.1",
+    "superagent-promise": "^1.1.0",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "<rootDir>/tsconfig.json",
+        "babelConfig": {
+          "presets": [
+            "#babel/preset-env",
+            "#babel/preset-react"
+          ]
+        }
+      }
+    },
+    "verbose": true,
+    "testRegex": "(/__tests__/.*|(\\.|/)(test))\\.(jsx?|tsx?)$",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

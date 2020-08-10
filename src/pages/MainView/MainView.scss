@@ -1,0 +1,106 @@
+.alert {
+  font-size: larger;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.subTitle {
+  font-size: 22px;
+  font-weight: 300;
+}
+.center {
+  text-align: center;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  div {
+    padding: 8px;
+  }
+
+  .details {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    .buttons {
+      display: flex;
+    }
+
+    Button {
+      flex: 1;
+      height: 100px;
+      font-size: 25px;
+      margin: 8px;
+    }
+  }
+}
+
+.cardsContainer {
+  display: flex;
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    flex: 1;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+    font-size: large;
+    justify-content: space-between;
+
+    div {
+      display: inline-block;
+    }
+
+    div:nth-child(2) {
+      font-size: 30px;
+    }
+
+    &.yes {
+      background-color: rgba(255, 0, 0, 0.4);
+    }
+
+    &.no {
+      background-color: rgba(0, 147, 0, 0.36);
+    }
+  }
+}
+
+#alert-dialog-slide-description {
+  text-align: center;
+
+  .bold {
+    font-weight: bold;
+  }
+}
+
+#alert-dialog-slide-title {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+
+  h2 {
+    font-size: 40px !important;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}

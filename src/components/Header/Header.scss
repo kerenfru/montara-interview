@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar .logo {
+  flex: 1;
+  display: flex;
+  font-size: large;
+}
+
+.navbar .menu-container {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .menu-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu-container ul li {
+  padding-left: 16px;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.link {
+  color: white;
+
+  &:hover {
+    color: white;
+    // text-decoration: none;
+  }
+}

@@ -12,7 +12,7 @@ export default class QuarantineLogs extends React.Component {
         return (
             <div className='sickLog'>
                 <div className='subTitle'>Quarantine log:</div>
-                {/*<div className=''>Start Date: {new Date(quarantineDate).toLocaleDateString()}</div>*/}
+                <div className=''>Start Date: {new Date(quarantineDate).toLocaleDateString()}</div>
                 <div className='center'>
                     <Countdown {...{timeTillDate: getDatePlus14Days(quarantineDate), timeFormat: "MM DD YYYY, h:mm a"}}/>
                 </div>

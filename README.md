@@ -1,5 +1,5 @@
 # Montara
-A simple example to showcase MobX features.
+Montara Frontend Home Assignment.
 ## Prerequisites
 
 

@@ -9,22 +9,22 @@ export default class Actions extends React.Component {
     }
 
     render() {
-        const { currentUser, exitEntry, logEntry, iAmSick } = this.props;
+        const { currentUser, exitEntry, logEntry, iAmSick, logLoading, exitLoading, sickLoading } = this.props;
         return (
             <div className='actions'>
                 <div className='subTitle'>Actions:</div>
                 <div className='buttons'>
                     <Button variant="outlined" color="primary" onClick={logEntry} daya-cy='entry'
                             disabled={currentUser.isSick || currentUser.isQuarantine || userStore.canEntry}>
-                        Log Entry
+                        {logLoading ? 'Loading...' : 'Log Entry'}
                     </Button>
                     <Button variant="outlined" color="primary" onClick={exitEntry} daya-cy='exit'
                             disabled={userStore.canExit}>
-                        Exit Entry
+                        {exitLoading ? 'Loading...' : 'Exit Entry'}
                     </Button>
                     <Button variant="outlined" color="primary" onClick={iAmSick} daya-cy='sick'
                             disabled={currentUser.isSick}>
-                        I am Sick
+                        {sickLoading ? 'Loading...' : 'I am Sick'}
                     </Button>
                 </div>
             </div>)

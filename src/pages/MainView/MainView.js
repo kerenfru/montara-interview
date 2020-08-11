@@ -37,13 +37,13 @@ export default class MainView extends React.Component {
 
     logEntry = () => {
         userStore.setCanExit(true);
-        userStore.updateUser({log: [...userStore.currentUser.log || [], {entry: new Date()}]})
+        userStore.logEntryUser({log: [...userStore.currentUser.log || [], {entry: new Date()}]})
     };
 
     exitEntry = () => {
         userStore.setCanExit(false);
         const last = (userStore.currentUser.log && userStore.currentUser.log.pop()) || {};
-        userStore.updateUser({log: [...userStore.currentUser.log || [], {...last, exit: new Date()}]})
+        userStore.exitEntryUser({log: [...userStore.currentUser.log || [], {...last, exit: new Date()}]})
     };
 
     iAmSick = () => {
@@ -90,7 +90,7 @@ export default class MainView extends React.Component {
     }
 
     render() {
-        const {currentUser, isLoading} = userStore;
+        const {currentUser, isLoading, logLoading, exitLoading, sickLoading} = userStore;
         if (isLoading) {
             return <LoadingSpinner/>
         }
@@ -124,7 +124,10 @@ export default class MainView extends React.Component {
                         currentUser,
                         logEntry: this.logEntry,
                         exitEntry: this.exitEntry,
-                        iAmSick: this.iAmSick
+                        iAmSick: this.iAmSick,
+                        logLoading,
+                        exitLoading,
+                        sickLoading
                     }}/>
 
                     {currentUser.quarantineDate &&

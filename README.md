@@ -7,27 +7,25 @@ Install [NPM](https://www.npmjs.com/) and [Node.js](https://nodejs.org/en/downlo
 ## Scripts
 In the project directory you can run:
 
-```yarn```
+```npm install```
 
 Installs dependencies
 
-```yarn start```
+```npm run start```
 
 Runs the app in the development mode.
 Open http://localhost:8000 to view it in the browser.
 The page will reload if you make edits.
 
-```yarn build```
+```npm run build```
 
 Creates a minified build file under dist folder.
 
 ## Deployment
 
-```cd server```
+```sh server/build_server.sh```
 
-```sh build_server.sh```
-
-```sh run_server.sh```
+```sh server/run_server.sh```
 
 ```sh build_client.sh```
 
